@@ -224,6 +224,37 @@ label input[type="checkbox"] {
   }
 }
 
+/* page header */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & h1#page-header-title {
+    border: none;
+    & span {
+      font-size: 1rem;
+      color: var(--subtext0);
+    }
+  }
+  & nav {
+    & ul > li {
+      padding: 0 0 0 8px;
+      a, .page-button {
+        font-size: 0;
+        padding: 0;
+        &:hover {
+          background-color: var(--entry-hover-color);
+          border-radius: 5px;
+        }
+        & .icon {
+          height: 24px;
+          width: 24px;
+        }
+      }
+    }
+  }
+}
+
 /* setting pages */
 main {
   & form {
