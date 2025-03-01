@@ -24,6 +24,13 @@
   --rosewater: #f5e0dc;
 }
 
+a {
+  text-decoration: none !important;
+  &:focus {
+    outline: none;
+  }
+}
+
 .logo a span {
   color: var(--green);
 }
@@ -130,7 +137,7 @@ label input[type="checkbox"] {
   --header-link-color: var(--blue);
   --header-link-focus-color: var(--key);
   --header-link-hover-color: var(--lavender);
-  --header-active-link-color: var(--overlay1);
+  --header-active-link-color: var(--rosewater);
   --table-border-color: var(--overlay1);
   --table-th-background: var(--surface0);
   --table-th-color: var(--overlay0);
@@ -217,6 +224,7 @@ label input[type="checkbox"] {
   & nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     & ul > li {
       padding: 0 0 0 8px;
@@ -243,7 +251,6 @@ label input[type="checkbox"] {
         font-size: 0;
         padding: 0;
         &:hover {
-          background-color: var(--entry-hover-color);
           border-radius: 5px;
         }
         & .icon {
@@ -318,9 +325,6 @@ main .items {
     border-radius: 10px;
     padding: 0;
     position: relative;
-    &:hover {
-      background-color: var(--category-hover-color);
-    }
     & .item-title {
       height: 100%;
       width: 100%;
@@ -332,6 +336,10 @@ main .items {
         width: 100%;
         justify-content: space-between;
         padding: 8px 8px 64px;
+        font-weight: 800;
+        &:hover {
+          background-color: var(--category-hover-color);
+        }
       }
     }
     & .item-meta {
