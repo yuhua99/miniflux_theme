@@ -201,6 +201,7 @@ label input[type="checkbox"] {
   --entry-meta-color: var(--mauve);
   --entry-author-color: var(--green);
   --entry-hover-color: var(--surface0);
+  --entry-content-font-family: var(--font-family);
   --entry-content-color: var(--text);
   --entry-content-code-color: var(--blue);
   --entry-content-code-background: var(--base);
