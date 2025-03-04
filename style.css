@@ -65,7 +65,7 @@ a {
 
 .entry header h1 a:hover,
 .entry header h1 a:focus {
-  color: --var(link-hover-color);
+  color: var(--link-hover-color);
 }
 
 input[type="search"],
@@ -86,7 +86,7 @@ label input[type="checkbox"] {
 
 .button.button-primary:hover,
 .button.button-primary:focus {
-  background-color: var(--button-primary-background);
+  background-color: var(--button-primary-focus-background);
 }
 .button.button-primary:disabled {
   color: var(--button-primary-color);
@@ -136,16 +136,15 @@ label input[type="checkbox"] {
   --header-list-border-color: var(--overlay1);
   --header-link-color: var(--blue);
   --header-link-focus-color: var(--key);
-  --header-link-hover-color: var(--lavender);
-  --header-active-link-color: var(--rosewater);
+  --header-active-link-color: var(--lavender);
   --table-border-color: var(--overlay1);
   --table-th-background: var(--surface0);
   --table-th-color: var(--overlay0);
   --table-tr-hover-background-color: var(--base);
   --table-tr-hover-color: var(--overlay0);
-  --button-primary-border-color: var(--overlay0);
-  --button-primary-background: var(--overlay0);
-  --button-primary-color: var(--base);
+  --button-primary-border-color: var(--surface0);
+  --button-primary-background: var(--surface0);
+  --button-primary-color: var(--text);
   --button-primary-focus-border-color: var(--overlay1);
   --button-primary-focus-background: var(--overlay1);
   --input-background: var(--surface0);
@@ -229,6 +228,9 @@ label input[type="checkbox"] {
 
     & ul > li {
       padding: 0 0 0 8px;
+      & a:hover {
+        color: var(--link-hover-color);
+      }
     }
   }
 }
@@ -376,13 +378,13 @@ main .items {
         & .item-meta-info-title {
           position: absolute;
           left: 30px;
-          top: 12px;
+          top: 8px;
         }
         & .item-meta-info-timestamp {
           order: 3;
           position: absolute;
           right: 8px;
-          top: 12px;
+          top: 8px;
         }
         & .item-meta-info-reading-time {
           display: none;
