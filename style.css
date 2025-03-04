@@ -395,6 +395,71 @@ main .items {
       }
     }
   }
+  /* feed card */
+  & .feed-item {
+    border-radius: 10px;
+    padding: 0;
+    position: relative;
+    &:hover {
+      background-color: var(--surface1);
+    }
+    & .item-title {
+      height: 100%;
+      width: 100%;
+      & a {
+        display: flex;
+        width: 100%;
+        padding: 8px 16px 60px;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+    & .feed-entries-counter {
+      position: absolute;
+      left: 16px;
+      top: 28px;
+      font-size: 0.8rem;
+      color: var(--subtext0);
+    }
+    & .category {
+      position: absolute;
+      right: 16px;
+      top: 8px;
+    }
+    & .item-meta {
+      & .item-meta-info {
+        & .item-meta-info-site-url {
+          display: none;
+        }
+        & .item-meta-info-checked-at {
+          position: absolute;
+          bottom: 8px;
+          right: 16px;
+        }
+        & .item-meta-info-next-check-at {
+          position: absolute;
+          bottom: 24px;
+          right: 16px;
+        }
+      }
+      & .item-meta-icons {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+        & li > :is(a, button) {
+          font-size: 0;
+        }
+        & .icon {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    & .parsing-error {
+      margin-top: -30px;
+      padding: 0 16px 40px;
+    }
+  }
   /* add default rss source icon */
   & :is(.feed-item, .entry-item) {
     & .item-title {
