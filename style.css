@@ -393,4 +393,16 @@ main .items {
       }
     }
   }
+  /* add default rss source icon */
+  & :is(.feed-item, .entry-item) {
+    & .item-title {
+      & a:first-of-type:not(:has(> img))::before {
+        content: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij48ZGVmcz48Y2xpcFBhdGggaWQ9ImEiPjxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgcng9IjQiLz48L2NsaXBQYXRoPjwvZGVmcz48ZyBjbGlwLXBhdGg9InVybCgjYSkiPjxyZWN0IHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgcng9IjQiIGZpbGw9IiM0MDQwNDAiLz48cGF0aCBkPSJNMTMuNiAwQTIuNCAyLjQgMCAwIDEgMTYgMi40djExLjJhMi40IDIuNCAwIDAgMS0yLjQgMi40SDIuNEEyLjQgMi40IDAgMCAxIDAgMTMuNlYyLjRBMi40IDIuNCAwIDAgMSAyLjQgMHptLTIuNCA0LjhjMC0uODExLTEuMDY5LTEuMTA3LTEuNDg2LS40MTFMOCA3LjI0NSA2LjI4NiA0LjM4OWMtLjQxNy0uNjk2LTEuNDg2LS40LTEuNDg2LjQxMXY2LjRhLjguOCAwIDAgMCAuOC44bC4wOTQtLjAwNkEuOC44IDAgMCAwIDYuNCAxMS4yVjcuNjg4bC45MTQgMS41MjMuMDYuMDg3YS44LjggMCAwIDAgMS4zMTItLjA4N0w5LjYgNy42ODhWMTEuMmEuOC44IDAgMCAwIDEuNiAweiIgZmlsbD0iI0ZGRiIvPjwvZz48L3N2Zz4=);
+      }
+      & a:first-of-type img {
+        border-radius: 4px;
+        background-size: cover;
+      }
+    }
+  }
 }
