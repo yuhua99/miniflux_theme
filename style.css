@@ -485,21 +485,18 @@ main .items {
 /* article header */
 .entry {
   & .entry-header {
+    display: flex;
+    flex-direction: column;
     & h1#page-header-title {
-      margin: 0 0 4px;
+      margin: 0 0 8px;
       & a {
         font-size: var(--article-title-font-size);
         line-height: var(--article-title-line-height);
         font-weight: var(--article-title-font-weight);
       }
     }
-    & .entry-actions {
-      margin: 0;
-      & a span {
-        text-decoration: none;
-      }
-    }
     & .entry-meta {
+      order: 1;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -523,6 +520,26 @@ main .items {
       }
       & .category {
         order: 2;
+      }
+    }
+    & .entry-tags {
+      order: 2;
+      margin: 0 0 8px;
+      font-size: 0.95rem;
+    }
+    & .entry-date {
+      order: 3;
+      font-size: 0.8rem;
+    }
+    & .entry-actions {
+      order: 4;
+      margin: -24px 0 0 auto;
+      & a span, .page-button {
+        text-decoration: none;
+        font-size: 0.8rem;
+      }
+      & ul li {
+        margin: 0 0 0 8px;
       }
     }
   }
