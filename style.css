@@ -569,3 +569,10 @@ main {
     }
   }
 }
+/* search bar */
+main search form {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 0 0 16px;
+}
