@@ -210,8 +210,8 @@ label input[type="checkbox"] {
   --entry-hover-color: var(--surface0);
   --entry-content-font-family: var(--font-family);
   --entry-content-color: var(--text);
-  --entry-content-code-color: var(--blue);
-  --entry-content-code-background: var(--base);
+  --entry-content-code-color: var(--text);
+  --entry-content-code-background: var(--surface0);
   --entry-content-code-border-color: var(--overlay1);
   --entry-content-fig-caption: var(--subtext0);
   --entry-content-quote-color: var(--mauve);
@@ -554,6 +554,11 @@ main {
     line-height: var(--article-content-line-height);
     font-weight: var(--article-content-font-weight);
     padding-bottom: 60px;
+    & pre {
+      font-size: 0.9rem;
+      border: none;
+      padding: 8px;
+    }
   }
   & .pagination-entry-bottom {
     border: none;
